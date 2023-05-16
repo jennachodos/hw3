@@ -1,4 +1,7 @@
+<!--- View for list of places --> 
 <h1> Places I've Been </h1>
+
+<!--- Loop to display list of each individual space --> 
 
  <ul>
    <% for place in @places %>
@@ -7,5 +10,7 @@
     </li>
    <% end %>
 </ul>
+
+<!--- Link to display new space --> 
 
 <p><a href="/places/new">Create a new place</a></p>

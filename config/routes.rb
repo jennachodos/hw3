@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # Suppor the two resources needed
   resources "places"
   resources "posts"
-  # Defines the root path route ("/")
-  # get("/", { :controller => "articles", :action => "index" })
 end

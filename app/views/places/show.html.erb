@@ -1,10 +1,12 @@
 
-
+<!-- Create view for each individual place-->
 <h1><%= @place["name"] %></h1>
 <body>
+<!-- On each individual place page, pull the name of the place, as well as the list of posts for each place-->
+
 <h3>Posts</h3>
     <% for post in @posts %>
-      <p><h4><%= post["title"]%></h4></p>
+      <p><h4><u><%= post["title"]%></h4></u></p>
       <p><small><%= post["posted_on"]%></small></p>
       <ul><li><%= post["description"]%></li></ul>
     <% end %>
@@ -14,10 +16,12 @@
 	</p>
 </body>
 
-<p><button><a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a></button></p>
+<!-- Add link to create a new post for this specific place -->
 
-<p><%= button_to "Delete this place", @post, :method => "delete" %></p>
+<p><a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a></p>
 
+
+<!-- Link to return to places landing with list of all places -->
 <p><a href="/places">Back to All Places </a></p>
 
 

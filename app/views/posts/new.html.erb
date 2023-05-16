@@ -1,3 +1,4 @@
+<!-- Form for a new post, containing a text field for the Title, a date entry field, and a text area for a longer description-->
 <h1> New Post </h1>
 
 <%= form_with :model => @post do |form| %>
@@ -11,9 +12,10 @@
   </p>
   <p>
     <%=form.label "description" %>
-    <%=form.text_field "description" %>
+    <%=form.text_area "description" %>
   </p>
   <%= form.hidden_field "place_id" %>
+  <!--Submit the form -->
   <%= form.submit %>
   
 

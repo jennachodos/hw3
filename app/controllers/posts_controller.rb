@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
 
+
 def show
+  #render posts/show view with details about the post
   @post = Post.find_by({"id"=> params["id"]})
   @place = Place.find_by({"id" => @post["post_id"]})
 end 
 
 def new 
+  #render posts/new view with new Post form
   @post = Post.new 
   @place = Place.find_by({"id" => params["place_id"]})
   @post["place_id"]= @place["id"]
