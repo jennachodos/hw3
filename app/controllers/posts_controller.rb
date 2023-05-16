@@ -17,6 +17,7 @@ def create
   @post["title"] = params["post"]["title"]
   @post["posted_on"]= params["post"]["posted_on"]
   @post["description"]= params["post"]["description"]
+  @post["place_id"]= params["post"]["place_id"]
   #save Post row
   @post.save
   #redirect user
